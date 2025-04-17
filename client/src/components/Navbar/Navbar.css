@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  display: flex;
+  grid-column: span 3;
+  grid-row: 1 / 1;
+}

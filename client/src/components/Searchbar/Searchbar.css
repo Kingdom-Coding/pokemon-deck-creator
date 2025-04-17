@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.searchbar-container {
+  display: flex;
+  width: fit-content;
+  height: 50px;
+  align-items: center;
+  margin-left: 1em;
+  gap: 1em;
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin-top: 1em;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+p {
+  display: inline-block;
+  width: min-content;
+}
+
+input {
+  display: inline-block;
+  height: min-content;
+  font-size: 1.2em;
+  border: none;
+  outline: none;
+}
