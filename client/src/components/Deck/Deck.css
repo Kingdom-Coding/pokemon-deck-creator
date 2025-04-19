@@ -29,3 +29,20 @@
   height: 500px;
   border-radius: 10px;
 }
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.deck li {
+  width: 120px;
+  height: 150px;
+  background-color: #222222;
+}
+
+.item {
+  background-color: rgb(159, 211, 187);
+}
