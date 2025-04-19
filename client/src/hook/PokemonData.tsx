@@ -20,26 +20,25 @@ export type Data = {
 function usePokemonDataSource() {
   const [pokemon, setPokemon] = useState<Data[]>([]);
   const [pokemonDetails, setPokemonDetails] = useState<Data[]>([]);
-  const URL = "https://pokeapi.co/api/v2/pokemon";
+  const URL = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=500";
 
   useEffect(() => {
     const fetchPokemon = async () => {
       const res = await fetch(URL);
       const data = await res.json();
       setPokemon(data.results); // set names list
-  
+
       const detailPromises = data.results.map(async (poke: { url: string }) => {
         const res = await fetch(poke.url);
         return res.json();
       });
-  
+
       const details = await Promise.all(detailPromises);
       setPokemonDetails(details); // set all details at once
     };
-  
+
     fetchPokemon();
   }, []);
-  
 
   return { pokemon, pokemonDetails };
 }
