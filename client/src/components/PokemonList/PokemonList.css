@@ -62,7 +62,8 @@ ul li {
   margin: 0.5em;
 }
 
-.card-container {
+.card-container,
+.slot-container {
   display: grid;
   place-content: center;
   height: max-content;
